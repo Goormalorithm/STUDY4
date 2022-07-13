@@ -7,7 +7,7 @@ class Solution:
         leftSum = 0
         totalSum = sum(nums)
         
-        for i in range(len(nums)):
+        for i in range(len(nums)): # O(N)
             diff = totalSum - nums[i] - leftSum
             
             if diff == leftSum:
@@ -16,3 +16,5 @@ class Solution:
             leftSum += nums[i]
             
         return -1
+    
+    #Space: diff, leftsum, totalsum
